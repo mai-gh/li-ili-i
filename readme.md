@@ -2,6 +2,8 @@
 
 ### a minimalist microbloging framework based around git and plain text files
 
+Take a look: https://mai-gh.github.io/li-ili-i/
+
 
 ## Setup
 
