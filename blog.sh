@@ -48,7 +48,7 @@ case $CMD in
       exit 1
     fi
     vim posts/${TITLE}.txt
-    node build.js 
+    node build.js
     ;;
 
   list)
@@ -59,6 +59,7 @@ case $CMD in
     git add .
     git commit -m 'auto-commit'
     git push
+    sh publish.sh
     ;;
 
   *)
