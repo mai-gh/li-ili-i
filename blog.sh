@@ -32,7 +32,7 @@ case $CMD in
       exit 1
     fi
     date > posts/${TITLE}.txt
-    echo $TITLE >> posts/${TITLE}.txt
+    echo "<h2>$TITLE</h2>" >> posts/${TITLE}.txt
     vim +set\ tw=80 +set\ spell posts/${TITLE}.txt
     node build.js 
     ;;

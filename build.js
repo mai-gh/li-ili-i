@@ -2,7 +2,9 @@ const { JSDOM } = require('jsdom');
 const { readdir, readFile, writeFile } = require("fs").promises;
 
 const buildPostElement = (doc, inputText) => {
-  const postTextNode = doc.createTextNode(inputText);
+//  const postTextNode = doc.createTextNode(inputText);
+
+  const postTextNode = JSDOM.fragment(inputText);
   const postContainer = doc.createElement("div");
   postContainer.classList.add("individualPost")
   postContainer.appendChild(postTextNode);
@@ -27,7 +29,7 @@ const buildBlogHTML = async () => {
   for (const post of postsListArr) {
     postsListDiv.appendChild(buildPostElement(dom.window.document, post.content));
   }
-  await writeFile('./index.html', dom.window.document.documentElement.outerHTML);
+  await writeFile('./index.html', dom.serialize());
 }
 
 
