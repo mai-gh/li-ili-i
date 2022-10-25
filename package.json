@@ -1,0 +1,15 @@
+{
+  "name": "liʻiliʻ",
+  "description": "a minimalist microbloging framework based around git and plain text files",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mai-gh/blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mai-gh/blog/issues"
+  },
+  "homepage": "https://github.com/mai-gh/blog#readme",
+  "dependencies": {
+    "jsdom": "^20.0.1"
+  }
+}

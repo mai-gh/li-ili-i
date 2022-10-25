@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Blog</title>
+    <style>
+      body {
+        color: #fff;
+        background-color: #110f14;
+      }
+      .header, .footer {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+      #postsList .banner {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+      }
+      .individualPost {
+        padding: 50px;
+        border: 2px;
+        border-style: hidden hidden double hidden;
+        display: block;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-right: auto;
+        font-family: monospace;
+        white-space: pre;
+        width: 80%
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="header">
+      <div>
+        <h1>My Blog</h1>
+        <h5>Just some notes on my tech experiences</h5>
+      </div>  
+    </div>
+
+    <div id="postsList"></div>
+    
+    <div class="footer">
+      <div>
+        <h5>Built with <a href="https://github.com/mai-gh/blog">liʻiliʻi</a>.</h5>
+      </div>  
+    </div>
+
+  </body>
+</html>
