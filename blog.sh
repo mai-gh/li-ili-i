@@ -33,7 +33,7 @@ case $CMD in
     fi
     date > posts/${TITLE}.txt
     echo $TITLE >> posts/${TITLE}.txt
-    vim posts/${TITLE}.txt
+    vim +set\ tw=80 +set\ spell posts/${TITLE}.txt
     node build.js 
     ;;
 
@@ -47,7 +47,7 @@ case $CMD in
       echo "FILE DOES NOT EXIST, use \`new\' cmd"
       exit 1
     fi
-    vim posts/${TITLE}.txt
+    vim +set\ tw=80 +set\ spell posts/${TITLE}.txt
     node build.js
     ;;
 
