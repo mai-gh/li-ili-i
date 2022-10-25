@@ -5,12 +5,10 @@
 
 ## Setup
 
- 1. [fork this repo](https://github.com/mai-gh/li-ili-i/fork)
- 2. create a new github repo for posts
- 3. clone this repo
+ 1. [fork this repo](https://github.com/mai-gh/li-ili-i/fork) remember to rename it to blog
+ 3. git clone git@github.com:YOURUSERNAME/blog.git
+    cd blog
  4. npm install
- 4. add your posts repo as a submodule
- git submodule add -f git@github.com:mai-gh/posts 
-cd posts
-git branch -u origin/main main
+ 5. ./blog.sh new post_title
+ 6. ./blog.sh publish
 
