@@ -31,8 +31,8 @@ case $CMD in
       echo "FILE EXISTS, use \`edit\' cmd"
       exit 1
     fi
-    date > posts/${TITLE}.txt
-    echo "<h2>$TITLE</h2>" >> posts/${TITLE}.txt
+    echo "$TITLE" > posts/${TITLE}.txt
+    date >> posts/${TITLE}.txt
     vim +set\ tw=80 +set\ spell +set\ syntax=html posts/${TITLE}.txt
     node build.js 
     ;;
