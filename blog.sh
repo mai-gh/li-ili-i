@@ -59,7 +59,21 @@ case $CMD in
     git add .
     git commit -m 'auto-commit'
     git push
-    sh publish.sh
+    git checkout main || { echo 'failed to switch to main'; exit 1; } # make sure you are on main! if not, bail!
+    git branch -D gh-pages # delete the local gh-pages branch (if it exists)
+    git push origin --delete gh-pages # delete the remote gh-pages branch
+    node build.js # build index.html
+    git checkout -b gh-pages # create new local branch gh-pages & switch to it
+    sed -i 's@^\(dist\)@#\1@' .gitignore # stop ignoring files we want to publish, then add them
+    sed -i 's@^\(index\.html\)@#\1@' .gitignore
+    mkdir dist
+    mv index.html dist/index.html
+    git add dist/index.html
+    git commit -m "automated commit"
+    git subtree push --prefix dist origin gh-pages # push the dist folder as the root of the gh-pages branch
+    git checkout main # switch back to main
+    git branch -D gh-pages # delete the local gh-pages branch
+    git reset --hard # reset all files back to main
     ;;
 
   *)
