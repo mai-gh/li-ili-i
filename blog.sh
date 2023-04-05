@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd `realpath $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`
+cd `realpath $0 | awk 'BEGIN{FS=OFS="/"}{NF--; print}'`/..
 
 CMD=$1
 TITLE=$2
