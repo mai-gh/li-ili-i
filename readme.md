@@ -43,4 +43,4 @@ to get submodule if already cloned:
 
 if source for li-ili-i has update, you can update your submode reference with
 
-`git submodule update --remote && git add li-ili-i && git commit -m "update li-ili-i reference"`
+`git submodule update --remote && git add li-ili-i && git commit -m "update li-ili-i reference" && git push`
