@@ -34,10 +34,13 @@ mkdir posts
 ## Maintenance
 
 to clone with submodule:
+
 `git clone --recursive git@github.com:mai-gh/blog.git`
 
 to get submodule if already cloned:
+
 `git submodule update --init --recursive`
 
 if source for li-ili-i has update, you can update your submode reference with
+
 `git submodule update --remote && git add li-ili-i && git commit -m "update li-ili-i reference"`
